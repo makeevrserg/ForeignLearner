@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:min="0"
+        android:progress="25"
+        android:max="100"
+        android:layout_margin="5sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/imageButtonHintWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="5sp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/linearLayout"
+        android:src="@drawable/ic_word_hint_non_colored"/>
+    <ImageButton
+        android:id="@+id/imageButtonAddToHard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:layout_alignParentStart="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_above="@id/linearLayout"
+        android:layout_margin="5sp"
+        android:src="@drawable/ic_hard_work"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonRevertWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/progressBar"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="5sp"
+        android:src="@drawable/ic_undo"/>
+    <ImageView
+        android:id="@+id/imageViewShowTranscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleY="2"
+        android:scaleX="2"
+        android:padding="15sp"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ic_foreign_to_word"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_above="@id/linearLayout"
+        android:layout_margin="5sp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/progressBar"
+        android:layout_above="@id/imageViewShowTranscription">
+
+        <TextView
+            android:id="@+id/textViewWord"
+            android:textColor="?attr/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="25sp"
+            android:text="Слово" />
+
+        <TextView
+            android:id="@+id/textViewTranscription"
+            android:layout_below="@id/textViewWord"
+            android:textColor="?attr/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:text="[Транскрипция]" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonAnswer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:textColor="?attr/textColor"
+            android:layout_marginTop="5sp"
+            android:text="Button 1"/>
+        <Button
+            android:id="@+id/buttonAnswer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:textColor="?attr/textColor"
+            android:layout_marginTop="5sp"
+            android:text="Button 2"/>
+        <Button
+            android:id="@+id/buttonAnswer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:textColor="?attr/textColor"
+            android:layout_marginTop="5sp"
+            android:text="Button 3"/>
+        <Button
+            android:id="@+id/buttonAnswer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:textColor="?attr/textColor"
+            android:layout_marginTop="5sp"
+            android:text="Button 4"/>
+
+    </LinearLayout>
+</RelativeLayout>

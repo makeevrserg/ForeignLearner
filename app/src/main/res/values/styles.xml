@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="colorPrimary">#202020</item>
+        <item name="colorPrimaryDark">#171A1D</item>
+        <item name="colorAccent">#FF9800</item>
+        <item name="cardbackground">#272626</item>
+        <item name="textColor">#CACACA</item>
+        <item name="textColorTag">#D6991F</item>
+        <item name="textWebColor">#0A63A0</item>
+        <item name="hintColor">#818181</item>
+
+        <item name="buttoncolorselected">#CE4B23</item>
+        <item name="buttoncolorcorrect">#3A8B34</item>
+        <item name="buttoncolorincorrect">#9B1731</item>
+    </style>
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/buttonJapanese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:background="?attr/colorPrimary"
+            android:drawableStart="@drawable/ic_japan"
+            android:paddingHorizontal="10sp"
+            android:text="\t\tЯпонский"
+            android:textAlignment="textStart"
+            android:textColor="?attr/textColor" />
+
+        <Button
+            android:id="@+id/buttonEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:background="?attr/colorPrimary"
+            android:drawableStart="@drawable/ic_english"
+            android:paddingHorizontal="10sp"
+            android:text="\t\tАнглийский"
+            android:textAlignment="textStart"
+            android:textColor="?attr/textColor" />
+
+        <Button
+            android:id="@+id/button_import_export"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:background="?attr/colorPrimary"
+            android:drawableStart="@drawable/ic_words_import"
+            android:paddingHorizontal="10sp"
+            android:text="\t\tИмпорт и экспорт слов"
+            android:textAlignment="textStart"
+            android:textColor="?attr/textColor" />
+
+        <Button
+            android:id="@+id/buttonThemes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:background="?attr/colorPrimary"
+            android:drawableStart="@drawable/ic_theme"
+            android:paddingHorizontal="10sp"
+            android:text="\t\tСменить тему"
+            android:textAlignment="textStart"
+            android:textColor="?attr/textColor" />
+
+        <Button
+            android:id="@+id/buttonStatistic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:background="?attr/colorPrimary"
+            android:drawableStart="@drawable/ic_statistic"
+            android:paddingHorizontal="10sp"
+            android:text="\t\tВаша статистика"
+            android:textAlignment="textStart"
+            android:textColor="?attr/textColor" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:paddingHorizontal="10sp"
+            android:textSize="15sp"
+            android:background="?attr/colorPrimary"
+            android:textColor="?attr/textColor"
+            android:text="Тег для тяжелых слов:"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/buttonHardWordsTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:drawableStart="@drawable/ic_effort"
+                android:paddingHorizontal="10sp"
+                android:text="\t\tТяжелые 1"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="?attr/textColor" />
+            <ImageView
+                android:id="@+id/imageViewAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:paddingHorizontal="15sp"
+                android:src="@drawable/ic_add"/>
+            <ImageView
+                android:id="@+id/imageViewMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?attr/colorPrimary"
+                android:paddingHorizontal="15sp"
+                android:src="@drawable/ic_minus"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

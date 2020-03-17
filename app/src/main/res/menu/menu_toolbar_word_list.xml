@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search_words"
+        android:title="Поиск"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:iconTint="?attr/hintColor"
+        android:icon="@drawable/ic_search"/>
+    <item
+        android:id="@+id/action_startlearning"
+        android:icon="@drawable/ic_startlearning"
+        android:title="Learn words"
+        android:iconTint="?attr/hintColor"
+        app:showAsAction="always"/>
+</menu>

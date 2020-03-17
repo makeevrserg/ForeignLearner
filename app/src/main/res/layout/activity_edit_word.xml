@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryDark">
+
+    <ImageView
+        android:padding="10sp"
+        android:id="@+id/imageViewClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:layout_alignTop="@id/buttonChangeWord"
+        android:layout_alignBottom="@id/buttonChangeWord"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickCloseEditor"/>
+    <Button
+        android:background="?attr/colorPrimary"
+        android:textColor="?attr/textColor"
+        android:id="@+id/buttonChangeWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Сохранить"
+        android:onClick="onClickSaveWord"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonChangeWord">
+        <RelativeLayout
+            android:padding="5sp"
+            android:layout_margin="5sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:textColor="?attr/textColor"
+                android:textColorHint="?attr/hintColor"
+                android:id="@+id/editTextWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/imageViewSpeakWord"
+                android:hint="Слово"/>
+            <ImageView
+                android:id="@+id/imageViewSpeakWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/editTextWord"
+                android:layout_alignBottom="@id/editTextWord"
+                android:src="@drawable/ic_speaker"
+                android:onClick="onClickSpeakWord"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/imageViewSpeakWord"
+                android:id="@+id/recycler_viewEditTextTranscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:textColor="?attr/textColor"
+                android:id="@+id/textViewAddTranscription"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_viewEditTextTranscription"
+                android:text="+Добавить дополнительную транскрипцию"
+                android:onClick="onClickAddTranscription"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/textViewAddTranscription"
+                android:id="@+id/recycler_viewEditTextTranslation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textColor="?attr/textColor"
+                android:id="@+id/textViewAddTranslation"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycler_viewEditTextTranslation"
+                android:text="+Добавить дополнительный перевод"
+                android:onClick="onClickAddTranslation"/>
+
+
+            <TextView
+                android:textColor="?attr/textColor"
+                android:id="@+id/editTextTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewAddTranslation"
+                android:text="Выбранные Теги:"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5sp"
+                android:minHeight="30dp"
+                android:id="@+id/recyclerViewTagsSelected_word_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/imageButtonTagSelect_word_edit"
+                android:layout_below="@id/editTextTags"
+                android:layout_marginBottom="60sp"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:background="@drawable/buttton_round"
+                android:layout_marginTop="5sp"
+                android:id="@+id/imageButtonTagSelect_word_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/recyclerViewTagsSelected_word_edit"
+                android:layout_below="@+id/editTextTags"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+                android:onClick="onClickSelectTags"/>
+            <Button
+                android:background="?attr/colorPrimary"
+                android:textColor="?attr/textColor"
+                android:id="@+id/buttonAddNewTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewTagsSelected_word_edit"
+                android:text="Добавить тег"
+                android:onClick="onClickAddTag"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

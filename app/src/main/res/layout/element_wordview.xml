@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutWordView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="2sp"
+    android:background="@drawable/card_round"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/textViewWordTranscription"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/textViewWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Word"
+            android:textColor="?attr/textColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textViewWordTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Translation"
+            android:textColor="?attr/textColor"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textViewWordTranscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:maxWidth="200sp"
+        android:text="[Transcription                                              ]\n\n\n"
+        android:textColor="?attr/textColor"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/textViewWordTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="#Tags"
+        android:textColor="?attr/textColorTag"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/textViewWordTranscription"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWordTag"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+
+        <ProgressBar
+            android:id="@+id/progressBarSmall"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20sp"
+            android:layout_height="12sp"
+            android:layout_below="@id/textViewWordTranscription"
+            android:layout_margin="2sp"
+            android:layout_toStartOf="@id/progressBarMedium"
+            android:max="50"
+            android:min="0"
+            android:progress="100" />
+
+        <ProgressBar
+            android:id="@+id/progressBarMedium"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20sp"
+            android:layout_height="12sp"
+            android:layout_below="@id/textViewWordTranscription"
+            android:layout_margin="2sp"
+            android:layout_toStartOf="@id/progressBarHigh"
+            android:max="75"
+            android:min="50"
+            android:progress="100" />
+
+        <ProgressBar
+            android:id="@+id/progressBarHigh"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="20sp"
+            android:layout_height="12sp"
+            android:layout_below="@id/textViewWordTranscription"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="2sp"
+            android:max="100"
+            android:min="75"
+            android:progress="100" />
+
+    </LinearLayout>
+
+</RelativeLayout>
